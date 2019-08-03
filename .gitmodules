@@ -1,0 +1,3 @@
+[submodule "delete"]
+	path = delete
+	url = git@github.com:Jihadist/Debugdelete.git
