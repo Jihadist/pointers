@@ -30,8 +30,19 @@ int main()
 
 	//constructor with object and deleter
 	std::shared_ptr<Foo> sh4(new Foo, D());
-	Shared_ptr<int> p1;
-	Shared_ptr<int> p2;
-	p1.swap(p2);
+	//Shared_ptr<int> p1;
+	//Shared_ptr<int> p2;
+	//p1.swap(p2);
 	//Shared_ptr<float> p2(13);
+		// constructor with no managed object
+	Shared_ptr<Foo> sH1;
+
+	// constructor with object
+	Shared_ptr<Foo> sH2(new Foo);
+	Shared_ptr<Foo> sH3(sH2);
+	std::cout << sh2.use_count() << '\n';
+	std::cout << sh3.use_count() << '\n';
+
+	//constructor with object and deleter
+	Shared_ptr<Foo> sH4(new Foo, D());
 }
